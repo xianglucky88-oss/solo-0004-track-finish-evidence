@@ -1,0 +1,36 @@
+{
+  "heat": "handoff-scale-pair",
+  "start_us": 1000,
+  "entries": [
+    {"id": "r1", "status": "eligible"},
+    {"id": "r2", "status": "eligible"},
+    {"id": "r3", "status": "eligible"},
+    {"id": "r4", "status": "eligible"},
+    {"id": "r5", "status": "dns"},
+    {"id": "r6", "status": "eligible"}
+  ],
+  "scales": [
+    {"id": "scale-a1", "camera": "a", "columns": [0, 80], "origin_us": 1100, "us_per_column": 10, "error_us": 3},
+    {"id": "scale-a2", "camera": "a", "columns": [86, 150], "origin_us": 2000, "us_per_column": 10, "error_us": 3},
+    {"id": "scale-b1", "camera": "b", "columns": [0, 100], "origin_us": 1100, "us_per_column": 12, "error_us": 2}
+  ],
+  "lane_assignments": [
+    {"id": "la1", "camera": "a", "lane": 1, "columns": [0, 150], "athlete": "r1"},
+    {"id": "la2-old", "camera": "a", "lane": 2, "columns": [0, 12], "athlete": "r6"},
+    {"id": "la2", "camera": "a", "lane": 2, "columns": [12, 150], "athlete": "r2"},
+    {"id": "la4", "camera": "a", "lane": 4, "columns": [0, 150], "athlete": "r4"},
+    {"id": "lb1", "camera": "b", "lane": 1, "columns": [0, 100], "athlete": "r3"}
+  ],
+  "calls": [
+    {"id": "call-a-break", "camera": "a", "lane": 7, "columns": [79, 86]},
+    {"id": "call-a-edge-hi", "camera": "a", "lane": 7, "columns": [86, 86]},
+    {"id": "call-a-edge-lo", "camera": "a", "lane": 7, "columns": [79, 79]},
+    {"id": "call-a-gap", "camera": "a", "lane": 7, "columns": [80, 80]},
+    {"id": "call-b-lane2", "camera": "b", "lane": 2, "columns": [30, 30]},
+    {"id": "call-r1", "camera": "a", "lane": 1, "columns": [10, 10]},
+    {"id": "call-r2", "camera": "a", "lane": 2, "columns": [10, 14]},
+    {"id": "call-r3", "camera": "b", "lane": 1, "columns": [20, 21]},
+    {"id": "call-r4-gap", "camera": "a", "lane": 4, "columns": [83, 84]},
+    {"id": "call-r6-old", "camera": "a", "lane": 2, "columns": [5, 5]}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "heat": "handoff-scale-pair",
+  "calls": [
+    {"id": "call-a-break", "camera": "a", "lane": 7, "columns": [79, 86], "athlete": null, "assignment": null, "scale": null, "finish_us": null},
+    {"id": "call-a-edge-hi", "camera": "a", "lane": 7, "columns": [86, 86], "athlete": null, "assignment": null, "scale": "scale-a2", "finish_us": [1997, 2003]},
+    {"id": "call-a-edge-lo", "camera": "a", "lane": 7, "columns": [79, 79], "athlete": null, "assignment": null, "scale": "scale-a1", "finish_us": [1887, 1893]},
+    {"id": "call-a-gap", "camera": "a", "lane": 7, "columns": [80, 80], "athlete": null, "assignment": null, "scale": null, "finish_us": null},
+    {"id": "call-b-lane2", "camera": "b", "lane": 2, "columns": [30, 30], "athlete": null, "assignment": null, "scale": "scale-b1", "finish_us": [1458, 1462]},
+    {"id": "call-r1", "camera": "a", "lane": 1, "columns": [10, 10], "athlete": "r1", "assignment": "la1", "scale": "scale-a1", "finish_us": [1197, 1203]},
+    {"id": "call-r2", "camera": "a", "lane": 2, "columns": [12, 14], "athlete": "r2", "assignment": "la2", "scale": "scale-a1", "finish_us": [1217, 1243]},
+    {"id": "call-r3", "camera": "b", "lane": 1, "columns": [20, 21], "athlete": "r3", "assignment": "lb1", "scale": "scale-b1", "finish_us": [1338, 1354]},
+    {"id": "call-r4-gap", "camera": "a", "lane": 4, "columns": [83, 84], "athlete": "r4", "assignment": "la4", "scale": null, "finish_us": null},
+    {"id": "call-r6-old", "camera": "a", "lane": 2, "columns": [5, 5], "athlete": "r6", "assignment": "la2-old", "scale": "scale-a1", "finish_us": [1147, 1153]}
+  ],
+  "places": [
+    {"athlete": "r1", "status": "eligible", "call": "call-r1", "place": null, "possible_places": [2, 3], "elapsed_us": [197, 203]},
+    {"athlete": "r2", "status": "eligible", "call": "call-r2", "place": null, "possible_places": [3, 4], "elapsed_us": [217, 243]},
+    {"athlete": "r3", "status": "eligible", "call": "call-r3", "place": null, "possible_places": [4, 5], "elapsed_us": [338, 354]},
+    {"athlete": "r4", "status": "eligible", "call": "call-r4-gap", "place": null, "possible_places": [1, 5], "elapsed_us": null},
+    {"athlete": "r5", "status": "dns", "call": null, "place": null, "possible_places": null, "elapsed_us": null},
+    {"athlete": "r6", "status": "eligible", "call": "call-r6-old", "place": null, "possible_places": [1, 2], "elapsed_us": [147, 153]}
+  ]
+}
