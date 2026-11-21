@@ -1,0 +1,63 @@
+{
+  "heat": "segmented-demo",
+  "starts": [
+    {
+      "id": "fire-early",
+      "time_us": 400,
+      "error_us": 10,
+      "athletes": ["x1"]
+    },
+    {
+      "id": "fire-pack",
+      "time_us": 900,
+      "error_us": 20,
+      "athletes": ["a1", "a2", "a3"]
+    },
+    {
+      "id": "fire-mid",
+      "time_us": 950,
+      "error_us": 60,
+      "athletes": ["c1"]
+    },
+    {
+      "id": "fire-late",
+      "time_us": 1000,
+      "error_us": 20,
+      "athletes": ["b1"]
+    }
+  ],
+  "entries": [
+    {"id": "x1", "status": "eligible"},
+    {"id": "b1", "status": "eligible"},
+    {"id": "a1", "status": "eligible"},
+    {"id": "a2", "status": "eligible"},
+    {"id": "a3", "status": "eligible"},
+    {"id": "c1", "status": "eligible"}
+  ],
+  "scales": [
+    {
+      "id": "scale-a",
+      "camera": "a",
+      "columns": [0, 120],
+      "origin_us": 1000,
+      "us_per_column": 10,
+      "error_us": 2
+    }
+  ],
+  "lane_assignments": [
+    {"id": "lane-x1", "camera": "a", "lane": 1, "columns": [0, 120], "athlete": "x1"},
+    {"id": "lane-b1", "camera": "a", "lane": 2, "columns": [0, 120], "athlete": "b1"},
+    {"id": "lane-a1", "camera": "a", "lane": 3, "columns": [0, 120], "athlete": "a1"},
+    {"id": "lane-a2", "camera": "a", "lane": 4, "columns": [0, 120], "athlete": "a2"},
+    {"id": "lane-a3", "camera": "a", "lane": 5, "columns": [0, 120], "athlete": "a3"},
+    {"id": "lane-c1", "camera": "a", "lane": 6, "columns": [0, 120], "athlete": "c1"}
+  ],
+  "calls": [
+    {"id": "call-x1", "camera": "a", "lane": 1, "columns": [4, 4]},
+    {"id": "call-b1", "camera": "a", "lane": 2, "columns": [41, 41]},
+    {"id": "call-a1", "camera": "a", "lane": 3, "columns": [10, 10]},
+    {"id": "call-a2", "camera": "a", "lane": 4, "columns": [12, 12]},
+    {"id": "call-a3", "camera": "a", "lane": 5, "columns": [14, 14]},
+    {"id": "call-c1", "camera": "a", "lane": 6, "columns": [36, 36]}
+  ]
+}

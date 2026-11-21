@@ -1,0 +1,45 @@
+{
+  "heat": "missing-start-demo",
+  "starts": [
+    {
+      "id": "fire-a",
+      "time_us": 900,
+      "error_us": 20,
+      "athletes": ["m2", "m3"]
+    },
+    {
+      "id": "fire-b",
+      "time_us": 1000,
+      "error_us": 20,
+      "athletes": ["m4"]
+    }
+  ],
+  "entries": [
+    {"id": "m1", "status": "eligible"},
+    {"id": "m2", "status": "eligible"},
+    {"id": "m3", "status": "eligible"},
+    {"id": "m4", "status": "eligible"}
+  ],
+  "scales": [
+    {
+      "id": "scale-a",
+      "camera": "a",
+      "columns": [0, 60],
+      "origin_us": 1000,
+      "us_per_column": 10,
+      "error_us": 2
+    }
+  ],
+  "lane_assignments": [
+    {"id": "lane-m1", "camera": "a", "lane": 1, "columns": [0, 60], "athlete": "m1"},
+    {"id": "lane-m2", "camera": "a", "lane": 2, "columns": [0, 60], "athlete": "m2"},
+    {"id": "lane-m3", "camera": "a", "lane": 3, "columns": [0, 60], "athlete": "m3"},
+    {"id": "lane-m4", "camera": "a", "lane": 4, "columns": [0, 60], "athlete": "m4"}
+  ],
+  "calls": [
+    {"id": "call-m1", "camera": "a", "lane": 1, "columns": [3, 3]},
+    {"id": "call-m2", "camera": "a", "lane": 2, "columns": [20, 20]},
+    {"id": "call-m3", "camera": "a", "lane": 3, "columns": [22, 22]},
+    {"id": "call-m4", "camera": "a", "lane": 4, "columns": [30, 30]}
+  ]
+}
