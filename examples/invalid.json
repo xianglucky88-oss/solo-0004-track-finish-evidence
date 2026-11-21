@@ -1,0 +1,151 @@
+{
+  "heat": "demo-heat",
+  "start_us": 1000,
+  "entries": [
+    {
+      "id": "r1",
+      "status": "eligible"
+    },
+    {
+      "id": "r2",
+      "status": "eligible"
+    },
+    {
+      "id": "r3",
+      "status": "eligible"
+    },
+    {
+      "id": "r4",
+      "status": "eligible"
+    },
+    {
+      "id": "r5",
+      "status": "dns"
+    }
+  ],
+  "scales": [
+    {
+      "id": "scale-a1",
+      "camera": "a",
+      "columns": [
+        0,
+        80
+      ],
+      "origin_us": 1100,
+      "us_per_column": 10,
+      "error_us": 3
+    },
+    {
+      "id": "scale-a2",
+      "camera": "a",
+      "columns": [
+        86,
+        150
+      ],
+      "origin_us": 1960,
+      "us_per_column": 10,
+      "error_us": 3
+    },
+    {
+      "id": "scale-b",
+      "camera": "b",
+      "columns": [
+        0,
+        100
+      ],
+      "origin_us": 1100,
+      "us_per_column": 12,
+      "error_us": 2
+    }
+  ],
+  "lane_assignments": [
+    {
+      "id": "la1",
+      "camera": "a",
+      "lane": 1,
+      "columns": [
+        0,
+        150
+      ],
+      "athlete": "r1"
+    },
+    {
+      "id": "la2-old",
+      "camera": "a",
+      "lane": 2,
+      "columns": [
+        0,
+        12
+      ],
+      "athlete": "r5"
+    },
+    {
+      "id": "la2",
+      "camera": "a",
+      "lane": 2,
+      "columns": [
+        11,
+        150
+      ],
+      "athlete": "r2"
+    },
+    {
+      "id": "lb3",
+      "camera": "b",
+      "lane": 3,
+      "columns": [
+        0,
+        100
+      ],
+      "athlete": "r3"
+    },
+    {
+      "id": "la4",
+      "camera": "a",
+      "lane": 4,
+      "columns": [
+        0,
+        150
+      ],
+      "athlete": "r4"
+    }
+  ],
+  "calls": [
+    {
+      "id": "call-1",
+      "camera": "a",
+      "lane": 1,
+      "columns": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "call-2",
+      "camera": "a",
+      "lane": 2,
+      "columns": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": "call-3",
+      "camera": "b",
+      "lane": 3,
+      "columns": [
+        20,
+        21
+      ]
+    },
+    {
+      "id": "call-4",
+      "camera": "a",
+      "lane": 4,
+      "columns": [
+        90,
+        90
+      ]
+    }
+  ]
+}
