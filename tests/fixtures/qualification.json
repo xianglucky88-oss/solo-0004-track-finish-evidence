@@ -1,0 +1,40 @@
+{
+  "heat": "two-pools",
+  "start_us": 0,
+  "entries": [
+    {"id": "p1", "status": "eligible"},
+    {"id": "p2", "status": "eligible"},
+    {"id": "m1", "status": "eligible"},
+    {"id": "m2", "status": "eligible"}
+  ],
+  "scales": [
+    {"id": "s-p", "camera": "p", "columns": [0, 100], "origin_us": 100,
+     "us_per_column": 10, "error_us": 0, "timebase": "tb-p"},
+    {"id": "s-p2", "camera": "p", "columns": [110, 200], "origin_us": 1200,
+     "us_per_column": 10, "error_us": 0, "timebase": "tb-p"},
+    {"id": "s-m", "camera": "m", "columns": [0, 100], "origin_us": 5000,
+     "us_per_column": 10, "error_us": 0, "timebase": "tb-m"}
+  ],
+  "lane_assignments": [
+    {"id": "lp1", "camera": "p", "lane": 1, "columns": [0, 100], "athlete": "p1"},
+    {"id": "lp2", "camera": "p", "lane": 2, "columns": [0, 100], "athlete": "p2"},
+    {"id": "lm1", "camera": "m", "lane": 1, "columns": [0, 100], "athlete": "m1"},
+    {"id": "lm2", "camera": "m", "lane": 2, "columns": [0, 100], "athlete": "m2"}
+  ],
+  "calls": [
+    {"id": "c-p1", "camera": "p", "lane": 1, "columns": [10, 10]},
+    {"id": "c-p2", "camera": "p", "lane": 2, "columns": [20, 20]},
+    {"id": "c-m1", "camera": "m", "lane": 1, "columns": [10, 10]},
+    {"id": "c-m2", "camera": "m", "lane": 2, "columns": [20, 20]}
+  ],
+  "qualification": {
+    "groups": [
+      {"id": "gp", "athletes": ["p1", "p2"], "automatic_slots": 1},
+      {"id": "gm", "athletes": ["m1", "m2"], "automatic_slots": 1}
+    ],
+    "at_large_pools": [
+      {"id": "pool-p", "groups": ["gp"], "at_large_slots": 1},
+      {"id": "pool-m", "groups": ["gm"], "at_large_slots": 1}
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "heat": "qualification-demo",
+  "start_us": 1000,
+  "entries": [
+    {
+      "id": "a",
+      "status": "eligible"
+    },
+    {
+      "id": "x",
+      "status": "eligible"
+    },
+    {
+      "id": "y",
+      "status": "eligible"
+    },
+    {
+      "id": "b",
+      "status": "eligible"
+    },
+    {
+      "id": "z",
+      "status": "eligible"
+    },
+    {
+      "id": "q",
+      "status": "dns"
+    }
+  ],
+  "scales": [
+    {
+      "id": "scale-c1",
+      "camera": "c",
+      "columns": [0, 60],
+      "origin_us": 1100,
+      "us_per_column": 10,
+      "error_us": 0,
+      "timebase": "tb-main"
+    },
+    {
+      "id": "scale-c2",
+      "camera": "c",
+      "columns": [70, 130],
+      "origin_us": 1800,
+      "us_per_column": 10,
+      "error_us": 0,
+      "timebase": "tb-main"
+    },
+    {
+      "id": "scale-d",
+      "camera": "d",
+      "columns": [0, 100],
+      "origin_us": 1100,
+      "us_per_column": 10,
+      "error_us": 0,
+      "timebase": "tb-main"
+    }
+  ],
+  "lane_assignments": [
+    {
+      "id": "lc-a",
+      "camera": "c",
+      "lane": 1,
+      "columns": [0, 130],
+      "athlete": "a"
+    },
+    {
+      "id": "lc-x",
+      "camera": "c",
+      "lane": 2,
+      "columns": [0, 130],
+      "athlete": "x"
+    },
+    {
+      "id": "lc-y",
+      "camera": "c",
+      "lane": 3,
+      "columns": [0, 130],
+      "athlete": "y"
+    },
+    {
+      "id": "ld-b",
+      "camera": "d",
+      "lane": 1,
+      "columns": [0, 100],
+      "athlete": "b"
+    },
+    {
+      "id": "ld-z",
+      "camera": "d",
+      "lane": 2,
+      "columns": [0, 100],
+      "athlete": "z"
+    }
+  ],
+  "calls": [
+    {
+      "id": "call-a",
+      "camera": "c",
+      "lane": 1,
+      "columns": [14, 16]
+    },
+    {
+      "id": "call-x",
+      "camera": "c",
+      "lane": 2,
+      "columns": [15, 17]
+    },
+    {
+      "id": "call-y",
+      "camera": "c",
+      "lane": 3,
+      "columns": [80, 82]
+    },
+    {
+      "id": "call-b",
+      "camera": "d",
+      "lane": 1,
+      "columns": [24, 26]
+    },
+    {
+      "id": "call-z",
+      "camera": "d",
+      "lane": 2,
+      "columns": [40, 42]
+    }
+  ],
+  "qualification": {
+    "groups": [
+      {
+        "id": "g1",
+        "athletes": ["a", "x", "y"],
+        "automatic_slots": 1
+      },
+      {
+        "id": "g2",
+        "athletes": ["b", "z"],
+        "automatic_slots": 1
+      }
+    ],
+    "at_large_pools": [
+      {
+        "id": "pool-main",
+        "groups": ["g1", "g2"],
+        "at_large_slots": 1
+      }
+    ]
+  }
+}

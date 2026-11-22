@@ -20,8 +20,9 @@ def read_calls(rows, lanes, scale):
         require(lo <= hi, 'reversed adjudication columns')
         camera, lane = row['camera'], integer(row['lane'], 'lane', 1)
         identity = next(((key, athlete) for x, y, key, athlete in lanes.get((camera, lane), ()) if x <= lo <= hi < y), None)
-        bounds, segment = scale.locate(camera, (lo, hi))
+        bounds, segment, timebase = scale.locate(camera, (lo, hi))
         facts.append({'id': key, 'camera': camera, 'lane': lane, 'columns': [lo, hi],
                       'athlete': identity[1] if identity else None, 'assignment': identity[0] if identity else None,
-                      'scale': segment, 'finish_us': [scalar(v) for v in bounds] if bounds else None})
+                      'scale': segment, 'timebase': timebase,
+                      'finish_us': [scalar(v) for v in bounds] if bounds else None})
     return facts
